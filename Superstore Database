@@ -43,3 +43,19 @@ FROM superstore;
 SELECT item_name, price
 FROM superstore
 ORDER BY price desc;
+
+SELECT item_name, price
+FROM superstore
+ORDER BY price;
+
+SELECT category, SUM(price)
+FROM superstore
+GROUP BY category;
+
+SELECT DISTINCT category, SUM(price)
+FROM superstore
+GROUP BY category;
+
+SELECT item_name, category, stock_quantity
+FROM superstore
+WHERE stock_quantity <50;
